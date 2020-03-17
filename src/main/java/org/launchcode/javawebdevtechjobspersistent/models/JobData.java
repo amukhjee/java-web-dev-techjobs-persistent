@@ -1,7 +1,7 @@
 package org.launchcode.javawebdevtechjobspersistent.models;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 // This is a change made in sandbox.
 
@@ -11,8 +11,7 @@ import java.util.List;
 public class JobData {
 
 
-    private static java.util.List<Skill> List;
-    private static Object Skill;
+
     private static java.util.List<org.launchcode.javawebdevtechjobspersistent.models.Skill> skills;
 
     /**
