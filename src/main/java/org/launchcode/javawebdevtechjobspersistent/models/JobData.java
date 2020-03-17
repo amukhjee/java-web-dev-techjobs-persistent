@@ -7,7 +7,7 @@ import java.util.ArrayList;
 /**
  * Created by LaunchCode
  */
-public class JobData extends AbstractEntity{
+public class JobData {
 
 
     /**
@@ -89,4 +89,3 @@ public class JobData extends AbstractEntity{
 
 
 }
-
