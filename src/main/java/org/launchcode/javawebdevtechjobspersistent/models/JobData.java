@@ -1,6 +1,7 @@
 package org.launchcode.javawebdevtechjobspersistent.models;
 
 import java.util.ArrayList;
+import java.util.List;
 
 // This is a change made in sandbox.
 
@@ -9,6 +10,10 @@ import java.util.ArrayList;
  */
 public class JobData {
 
+
+    private static java.util.List<Skill> List;
+    private static Object Skill;
+    private static java.util.List<org.launchcode.javawebdevtechjobspersistent.models.Skill> skills;
 
     /**
      * Returns the results of searching the Jobs data by field and search term.
@@ -51,6 +56,8 @@ public class JobData {
             theValue = job.getName();
         } else if (fieldName.equals("employer")){
             theValue = job.getEmployer().toString();
+        }else if (fieldName.equals("skill")){
+                theValue = job.getSkills().toString();
         } else {
             theValue = job.toString();
         }
@@ -72,18 +79,18 @@ public class JobData {
 
         for (Job job : allJobs) {
 
+
             if (job.getName().toLowerCase().contains(value.toLowerCase())) {
                 results.add(job);
-            } else if (job.getEmployer().getLocation().toLowerCase().contains(value.toLowerCase())) {
+            } else if (job.getEmployer().getName().toLowerCase().contains(value.toLowerCase())) {
                 results.add(job);
-            } else if (job.getSkills().getDescription().contains(value.toLowerCase())) {
+            } else if (job.getSkills().contains(value.toLowerCase())) {
                 results.add(job);
             } else if (job.toString().toLowerCase().contains(value.toLowerCase())) {
                 results.add(job);
             }
 
         }
-
         return results;
     }
 
